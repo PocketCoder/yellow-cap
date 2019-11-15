@@ -1,0 +1,117 @@
+/*
+	Yellow: #ffe100;
+	Black: ;
+	White: white;
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	display: flex;
+	-webkit-display:  flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	position: fixed;
+	height: 10vh;
+	width: 100vw;
+	background-color: #ffe100;
+	color: #292a2d;
+	font-weight: 100;
+	transition: background-color 0.40s ease-in-out;
+	z-index: 9999;
+	font-family: 'Bebas Neue';
+}
+
+header h1 {
+	padding-left: 4vh;
+	font-size: 2.5em;
+}
+
+nav ul {
+	list-style: none;
+	padding-right: 4vw;
+}
+
+nav ul li {
+	padding: 4vh 1vw;
+	float: left;
+	font-size: 1.25em;
+}
+
+a {
+	color: inherit;
+}
+
+a:visited {
+	color: inherit;
+}
+
+a.u {
+	text-decoration: none;
+	color: inherit;
+}
+
+a.u {
+  position: relative;
+}
+
+a.u:before, a.u.active:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a.u:hover:before, a.u.active:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+main  {
+	height: 100vh;
+	width: 100vw;
+	background-color: #292a2d;
+	background-image: url('dead in yellow.png');
+	background-size: cover;
+	background-position: left;
+	position: fixed;
+	z-index: -1;
+}
+
+#headings {
+	position: absolute;
+	height: auto;
+	padding: 4vh 2vw;
+	width: 20vw;
+	background-color: #292a2d;
+	right: 15vh;
+	bottom: 15vh;
+	color: white;
+	text-align: center;
+}
+
+#headings h1 {
+	color: #ffe100;
+	font-family: 'Covered By Your Grace', cursive;
+	font-size: 3.5em;
+}
