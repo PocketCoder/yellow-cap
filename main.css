@@ -1,6 +1,6 @@
 /*
 	Yellow: #ffe100;
-	Black: ;
+	Black: #292a2d;
 	White: white;
 */
 
@@ -25,12 +25,11 @@ header {
 	position: fixed;
 	height: 10vh;
 	width: 100vw;
-	background-color: #ffe100;
-	color: #292a2d;
 	font-weight: 100;
-	transition: background-color 0.40s ease-in-out;
 	z-index: 9999;
 	font-family: 'Bebas Neue';
+	color: #ffe100;
+	background-color: #292a2d;
 }
 
 header h1 {
@@ -87,15 +86,24 @@ a.u:hover:before, a.u.active:before {
   transform: scaleX(1);
 }
 
+header.home {
+	background-color: #ffe100;
+	color: #292a2d;
+}
+
 main  {
 	height: 100vh;
 	width: 100vw;
-	background-color: #292a2d;
-	background-image: url('dead\ in\ yellow.png');
-	background-size: cover;
-	background-position: left;
+	color: #292a2d;
+	background-color: #ffe100;
 	position: fixed;
 	z-index: -1;
+}
+
+main.home {
+	background-image: url('dead\ in\ yellow.png');
+	background-size: cover;
+	background-position: center;
 }
 
 #headings {
