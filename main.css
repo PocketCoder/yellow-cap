@@ -91,7 +91,7 @@ main  {
 	height: 100vh;
 	width: 100vw;
 	background-color: #292a2d;
-	background-image: url('dead in yellow.png');
+	background-image: url('dead\ in\ yellow.png');
 	background-size: cover;
 	background-position: left;
 	position: fixed;
