@@ -1,7 +1,35 @@
-/*
-	Yellow: #ffe100;
-	Black: #292a2d;
-	White: white;
+/* Fonts */
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('fonts/bebas_neue/BebasNeue-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('fonts/bebas_neue/BebasNeue-Regular.eot');
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('fonts/bebas_neue/BebasNeue-Regular.otf');
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('fonts/bebas_neue/BebasNeue-Regular.woff');
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('fonts/bebas_neue/BebasNeue-Regular.woff2');
+}
+
+
+/* Colours 
+	Yellow:		#ffe100;
+	Black:		#292a2d;
+	White:		white;
 */
 
 * {
@@ -14,6 +42,11 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+h1, h2 ,h3, h4, h5, h6 {
+	font-family: 'Bebas Neue';
 }
 
 header {
@@ -86,18 +119,27 @@ a.u:hover:before, a.u.active:before {
   transform: scaleX(1);
 }
 
+.dark a.u {
+	 
+}
+
 header.home {
 	background-color: #ffe100;
 	color: #292a2d;
 }
 
 main  {
-	height: 100vh;
-	width: 100vw;
 	color: #292a2d;
 	background-color: #ffe100;
 	position: fixed;
 	z-index: -1;
+	margin-top: 10vh;
+	height: 100vh;
+	width: 100vw;
+}
+
+main:not(.home) {
+	padding: 7vh 0 7vh 0;
 }
 
 main.home {
@@ -122,4 +164,149 @@ main.home {
 	color: #ffe100;
 	font-family: 'Covered By Your Grace', cursive;
 	font-size: 3.5vw;
+}
+
+main.about .flex {
+	display: flex;
+	-webkit-display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+main.about h1 {
+	font-size: 3.5em;
+	text-align: center;
+}
+
+.crew {
+	display: flex;
+	-webkit-display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	height: auto;
+	width: 50vw;
+}
+
+.crew > div {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	-webkit-display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.headline {
+	font-style: italic;
+	text-align: center;
+	width: 70%;
+}
+
+.headline:before, .headline:after {
+	content: "\"";
+}
+
+.crew h2 {
+	font-size: 2em;
+}
+
+.headshot {
+	border-radius: 1000px;
+	height: 20vh;
+	width: 20vh;
+	background-size: cover;
+}
+
+.crew #jake .headshot{
+	background-image: url('about/IMG_1199.JPG');
+	background-position: left;
+}
+
+.crew #brooke .headshot{
+	background-image: url('about/IMG_1198.JPG');
+	background-position: left;
+}
+
+#description {
+	padding: 10vh;
+	width: 60vw;
+	text-align: center;
+}
+
+/* Projects */
+
+
+.work {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-content: space-around;
+    -webkit-align-content: space-around;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5% 0;
+}
+
+.work .item {
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+    min-width: 400px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.work .item:hover {
+    -webkit-box-shadow: 0px 15px 30px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 15px 30px 10px rgba(0,0,0,0.75);
+    -o-box-shadow: 0px 15px 30px 10px rgba(0,0,0,0.75);
+    box-shadow: 0px 15px 30px 10px rgba(0,0,0,0.75);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.work a {
+    text-decoration: none;
+    color: inherit;
+    align-self: center;
+    text-align: center;
+}
+
+.item-info {
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    min-width: 50%;
+    min-height: 400px;
+}
+
+.item-info h2 {
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.item-info span {
+    color: #cfcfcf;
+    font-style: italic;
+    font-size: 0.9em;
+    padding-top: 5px;
 }
